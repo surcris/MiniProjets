@@ -1,0 +1,128 @@
+:root {
+    --heightSlide: 70px;
+    --white: #ffffff; 
+  }
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    
+    background: radial-gradient(circle, #2f3134, #2a2b2e, #262628, #212122, #1c1c1c);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 50px 100vh;
+    grid-template-areas: 
+    "header"
+    "main";
+}
+header{
+   
+    border: 1px solid white;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 70px calc(100% - 70px);
+}
+#btn-menu input{
+    height: 50px;
+    width: 50px;
+    padding-left: 10px;
+}
+#search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#search-container input{
+    background-color: #BABABA;
+    border: 1px solid #212122;
+    
+    height: 25px;
+}
+#search-container input[type=text]{
+    border-right: none;
+    padding-left: 10px;
+    border-radius: 3px 0 0 3px ;
+    width: 400px;
+}
+#search-container input[type=image]{
+    border-left: none;
+    border-radius:0 3px 3px 0;
+    color: #BABABA;
+}
+#main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: var(--heightSlide) calc(100% - var(--heightSlide));
+    
+}
+#main-container{
+    border: 1px solid red;
+    width: 100%;
+    overflow: auto;
+}
+#main-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+#presentaion{
+    position: relative;
+    height: 350px;
+    overflow: visible;
+}
+
+#slidebar-container{
+    
+    border: 1px solid white;
+    width: var(--heightSlide);
+    height: 100%;
+
+}
+.swiper-container {
+    
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+border-radius: 5px;
+width: 300px;
+opacity: 0.25;
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.swiper-slide-visible {
+    opacity: 1;
+}

@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+.titre{
+    background-color: blueviolet;
+    
+    width: auto;
+    height: auto;
+    text-align: center;
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+
+.titre > h1{
+    font-family: 'Varela Round', sans-serif;
+    
+    padding-top: 10px;
+    height: 50px;
+    margin: auto;
+}
+.projet{
+    
+    max-width: 1000px;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    grid-gap: 50px;
+    
+
+}
+
+.ajout{
+    font-family: 'Varela Round', sans-serif;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    transform:opacity 0.5s;
+    
+}
+.ajout:hover{
+    opacity: 0.7;
+}
+
+a:link, a:visited{
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+}
+.ajout > div{
+    padding-top: 10px;
+    
+ 
+
+}
+
+.ajout > input{
+    width: 150px;
+    
+}
