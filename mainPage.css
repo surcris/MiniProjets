@@ -1,7 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-
+    display: grid;
+    grid-template-rows: auto 1fr; 
 }
 
 .titre{
@@ -12,7 +13,9 @@ body{
     text-align: center;
     
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .titre > h1{
@@ -30,6 +33,7 @@ body{
     margin-left: auto;
     margin-right: auto;
 
+    
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
     justify-content: center;
@@ -71,4 +75,28 @@ a:link, a:visited{
 .ajout > input{
     width: 150px;
     
+}
+
+@media screen and (max-width:950px) {
+    .projet{
+    
+        grid-template-columns: repeat(2, 200px);
+        justify-content: center;
+        grid-gap: 50px;
+        
+    
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .projet{
+    
+        grid-template-columns: repeat(1, 200px);
+        justify-content: center;
+        grid-gap: 50px;
+        
+    
+    }
+
 }
