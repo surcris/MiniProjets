@@ -1,5 +1,5 @@
 :root {
-    --heightSlide: 70px;
+    --heightSlide: 68px;
     --white: #ffffff; 
   }
 
@@ -20,7 +20,6 @@ body{
 }
 header{
    
-    border: 1px solid white;
     width: 100%;
     height: auto;
     display: grid;
@@ -29,7 +28,9 @@ header{
 #btn-menu input{
     height: 50px;
     width: 50px;
-    padding-left: 10px;
+    padding-left: 8px;
+    padding-right: 10px;
+    background-color: #2f3134;
 }
 #search-container{
     display: flex;
@@ -57,13 +58,17 @@ header{
 #main{
     width: 100%;
     display: grid;
-    grid-template-columns: var(--heightSlide) calc(100% - var(--heightSlide));
-    
+    grid-template-columns: var(--heightSlide) calc(100vw - var(--heightSlide));
+    padding-right: 100px;
 }
 #main-container{
-    border: 1px solid red;
+    
     width: 100%;
+    
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    
 }
 #main-container::-webkit-scrollbar {
     display: none;
@@ -74,12 +79,14 @@ header{
 #presentaion{
     position: relative;
     height: 350px;
+    margin:0 30px;
     overflow: visible;
+    
 }
 
 #slidebar-container{
+    background-color: #2f3134;
     
-    border: 1px solid white;
     width: var(--heightSlide);
     height: 100%;
 
@@ -125,4 +132,60 @@ object-fit: cover;
 
 .swiper-slide-visible {
     opacity: 1;
+}
+
+#ajout-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 30px;
+    margin: 0 30px;
+}
+
+#jeux-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 30px;
+   
+    margin: 0 30px;
+}
+
+.jeux{
+    background-color: aliceblue;
+    height: 200px;
+    width: 150px;
+    margin-right: 30px;
+    border-radius: 10px;
+    background-image: url(images/assassin.jpg);
+    background-size: 150px 200px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.jeux a {
+    
+    text-decoration: none;
+    color: rgba(214, 214, 214, 1);
+    
+    
+}
+
+.jeux div{
+    text-align: center;
+    width: 100%;
+    background-color: rgba(10, 165, 236, 0.3);
+    border-radius: 0px 0 9px 9px;
+    transition: height 10s;
+    
+    
+}
+.jeux:hover div{
+    height: 100%;
+    
+   
 }
