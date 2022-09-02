@@ -1,14 +1,15 @@
 
 let etat = true;
 function myFunction() {
-    //var element = document.getElementById("slidebar-container");
-    //element.classList.toggle("toggled");
+    var r = document.querySelector(':root');
+    var element = document.getElementById("slidebar-container");
+    element.classList.toggle("toggled");
     
     if (etat) {
-        slideResize(200);
+        r.style.setProperty('--heightSlide', '200px');
         etat = false;
     } else {
-        slideResize(70);
+        r.style.setProperty('--heightSlide', '70px');
         etat = true;
     }
     
