@@ -1,43 +1,15 @@
-:root {
-    --heightSlide: 70px;
-    --white: #ffffff; 
-  }
-
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-body{
-    
-    background: radial-gradient(circle, #2f3134, #2a2b2e, #262628, #212122, #1c1c1c);
-    overflow: hidden;
-    background-attachment: fixed;
-    
-}
-
 header{
-    position: fixed;
+   
     width: 100%;
-    height: 60px;
-    background-color: #fff;
+    height: auto;
     display: grid;
     grid-template-columns: 70px calc(100% - 70px);
 }
-#btn-menu {
-    height: 60px;
-    width: 70px;
-    background-color: #2f3134;
-}
-#btn-menu:active #slidebar-container{
-    background-color: #0259db;
-}
 #btn-menu input{
-    padding-top: 5px;
-    height: 55px;
-    width: 70px;
-    margin: auto;
+    height: 50px;
+    width: 50px;
+    padding-left: 8px;
+    padding-right: 10px;
     background-color: #2f3134;
 }
 #search-container{
@@ -56,49 +28,41 @@ header{
     border-right: none;
     padding-left: 10px;
     border-radius: 3px 0 0 3px ;
-    height: 40px;
     width: 400px;
-    font-size: medium;
 }
 #search-container input[type=image]{
     border-left: none;
     border-radius:0 3px 3px 0;
     color: #BABABA;
-    height: 40px;
 }
-/* ////////////////////////////////// */
-
-#slidebar-container{
-    position: fixed;
-    top: 60px;
-    width: var(--heightSlide);
-    height: 100vh;
-    background-color: rgb(199, 15, 15);
-}
-
-
-
-/* ////////////////////////////////// */
 #main{
-    position: fixed;
-    top: 60px;
-    left: var(--heightSlide);
-    width: calc( 100vw - var(--heightSlide) ) ;
-    height: calc( 100vh - 60px ) ;
-    background-color: rgb(21, 199, 15);
-    display: flex;
-    flex-wrap: nowrap;
-	flex-direction: column;
+    width: 100%;
+    display: grid;
+    grid-template-columns: var(--heightSlide) calc(100vw - var(--heightSlide));
+    padding-right: 100px;
+}
+#main-container{
+    
+    width: 98%;
+    height: 84%;
     overflow: auto;
+    
+    flex-direction: column;
+    
 }
-#main::-webkit-scrollbar {
-    display: none;
+#main-container::-webkit-scrollbar {
+   display: none;
 }
+
+
+
+
 #presentaion{
     position: relative;
-    width: 95%;
-    margin:0 auto;
-    margin-top: 30px;
+    height: 350px;
+    margin:0 30px;
+    overflow: visible;
+    
 }
 
 #slidebar-container{
@@ -108,40 +72,47 @@ header{
     height: 100%;
 
 }
+.swiper-container {
+    
+}
 
 .swiper {
     width: 100%;
-    height: 350px;
+    height: 100%;
     
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    border-radius: 5px;
-    width: 300px;
-    
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+text-align: center;
+font-size: 18px;
+background: #fff;
+border-radius: 5px;
+width: 300px;
+opacity: 0.25;
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.swiper-slide-visible {
+    opacity: 1;
 }
 
 #ajout-container{
@@ -151,8 +122,8 @@ header{
 	justify-content: flex-start;
     padding-top: 30px;
     margin: 0 30px;
-    
     width: 95%;
+    overflow-x: auto;
     
 }
 
@@ -173,7 +144,7 @@ header{
     white-space: nowrap;
     background-color: aliceblue;
     height: 200px;
-    width: 150px;
+    min-width: 150px;
     margin-right: 30px;
     border-radius: 10px;
     background-image: url(images/assassin.jpg);
@@ -205,19 +176,20 @@ header{
     
 }
 .jeux p{
-   display: inline-block;
-   min-width: fit-content;
+    display: inline;
+    width: auto;
+    
+    
 } 
 
 .jeux .catégorie{
     width: 100%;
     min-height: 0px;
-    width: 150px;
+    min-width: 150px;
     visibility: hidden;
     background-color: rgba(3, 49, 70, 0.8);
     transition: min-height 0.3s, border-radius 0.2s, visibility 0.1s ;
-    display: grid;
-    grid-template-columns: repeat(auto-fill);
+    display: inline;
     
 }
 .jeux:hover .catégorie{

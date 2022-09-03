@@ -1,24 +1,48 @@
+document.getElementById("btn-menu").onclick = function() {myFunction()};
+let etat = false;
 
-let etat = true;
 function myFunction() {
-    var r = document.querySelector(':root');
-    var element = document.getElementById("slidebar-container");
-    var btn = document.getElementById("menu-button");
-    element.classList.toggle("toggled");
-    
     if (etat) {
-        r.style.setProperty('--heightSlide', '200px');
-        btn.style.paddingRight = "142px";
+        document.querySelector(':root').style.setProperty('--heightSlide', '200px');
         etat = false;
     } else {
-        r.style.setProperty('--heightSlide', '68px');
-        btn.style.paddingRight = "10px";
+        document.querySelector(':root').style.setProperty('--heightSlide', '70px');
         etat = true;
     }
     
+    
 }
 
-const $ = selector => {
-    return document.querySelector(selector);
-};
+
+let l;
+let index;
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    },
+    initialSlide: 0,
+    on: {
+        realIndexChange: function () {
+        index = swiper.realIndex + 1; /* slide 1 => slides[1] */
+        l = swiper.slides[index];
+        //l.style.color = "red";
+        
+        
+        },
+    },
+});
+
+
+
 
