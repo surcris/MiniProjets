@@ -206,7 +206,6 @@ header{
 	justify-content: flex-start;
     padding-top: 30px;
     margin: 0 30px;
-    
     width: 95%;
     
 }
@@ -254,7 +253,6 @@ header{
     background-color: rgba(3, 49, 70, 0.8);
     border-radius: 0px 0 9px 9px;
     
-    
 }
 .catégorie .cate{
     padding-left: 5px;
@@ -263,7 +261,7 @@ header{
     align-content: flex-start
 }
 .catégorie .cate div{
-    
+    transform: scale(0);
     margin-right: 5px;
     padding: 2px;
     width: auto;
@@ -273,8 +271,6 @@ header{
    
 }
 .catégorie .name-cate{
-    
-    
     padding-bottom: 5px;
     padding-top: 5px;
     padding-left: 5px;
@@ -285,13 +281,19 @@ header{
     width: 150px;
     visibility: hidden;
     background-color: rgba(3, 49, 70, 0.8);
-    transition: height 0.5s,visibility 0.25s,border-radius 0.1s ;
-    /* transition: height 5s, border-radius 0.2s, visibility 0.2s,background-color 0.5s ; */
+    transition: height 0.5s,visibility 0.1s,border-radius 0.1s ;
     
+}
+.jeux .cate div{
+    transition: transform 0.9s; 
 }
 .jeux:hover .catégorie{
     height: 180px;
     visibility: visible; 
     border-radius:  9px 9px 0 0;
     
+} 
+.jeux:hover .cate div{
+    transform: scale(1);
+
 } 
