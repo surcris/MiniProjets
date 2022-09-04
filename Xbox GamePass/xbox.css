@@ -170,7 +170,7 @@ header{
     display: none;
 }
 .jeux{
-    white-space: nowrap;
+    
     background-color: aliceblue;
     height: 200px;
     width: 150px;
@@ -190,13 +190,10 @@ header{
     
     text-decoration: none;
     color: rgba(214, 214, 214, 1);
-    
-    
 }
 
 .jeux .name-jeux{
     text-align: center;
-    
     height: 20px;
     width: 100%;
     background-color: rgba(3, 49, 70, 0.8);
@@ -204,20 +201,38 @@ header{
     
     
 }
-.jeux p{
-   display: inline-block;
-   min-width: fit-content;
+.catégorie .cate{
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start
+}
+.catégorie .cate div{
+    
+    margin-right: 5px;
+    padding: 2px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+   
+}
+.catégorie .name-cate{
+    
+    margin-right: 5px;
+    padding-bottom: 5px;
 } 
 
 .jeux .catégorie{
+    
+    padding: 0 3px;
+    padding-top: 5px;
     width: 100%;
     min-height: 0px;
     width: 150px;
     visibility: hidden;
     background-color: rgba(3, 49, 70, 0.8);
-    transition: min-height 0.3s, border-radius 0.2s, visibility 0.1s ;
-    display: grid;
-    grid-template-columns: repeat(auto-fill);
+    transition: min-height 0.5s, border-radius 0.2s, visibility 0.2s ;
     
 }
 .jeux:hover .catégorie{

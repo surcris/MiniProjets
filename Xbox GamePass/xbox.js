@@ -1,5 +1,5 @@
 document.getElementById("btn-menu").onclick = function() {myFunction()};
-let etat = false;
+let etat = true;
 
 function myFunction() {
     if (etat) {
