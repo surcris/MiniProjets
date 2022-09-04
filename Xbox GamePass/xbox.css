@@ -6,22 +6,23 @@
 *{
     margin: 0%;
     padding: 0%;
-    box-sizing: border-box;
+    
 }
 
 body{
-    
-    background: radial-gradient(circle, #2f3134, #2a2b2e, #262628, #212122, #1c1c1c);
-    overflow: hidden;
-    background-attachment: fixed;
-    
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(99, 99, 99);
 }
 
 header{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 60px;
-    background-color: #fff;
+    
     display: grid;
     grid-template-columns: 70px calc(100% - 70px);
 }
@@ -39,6 +40,10 @@ header{
     width: 70px;
     margin: auto;
     background-color: #2f3134;
+}
+#btn-menu input:active {
+    background-color: #2f3134;
+    --heightSlide:200px;
 }
 #search-container{
     display: flex;
@@ -68,29 +73,79 @@ header{
 }
 /* ////////////////////////////////// */
 
-#slidebar-container{
+#slidebar-box{
+    
     position: fixed;
     top: 60px;
     width: var(--heightSlide);
-    height: 100vh;
-    background-color: rgb(199, 15, 15);
+    height: calc( 100vh - 60px ) ;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(177, 43, 43);
+    
+    transition: all 0.25s linear; 
+    
+   
+}
+
+#slidebar-box:hover #main{
+    --heightSlide:200px;
+    
+}
+
+.slidebar-top div {
+    
+    padding:5px 5px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.slidebar-top div:hover {
+   background-color: #fff;
+}
+.slidebar-top div:hover p{
+    color: #212122; 
+    
+ }
+
+.slidebar-top div img{
+    height: 45px;
+    width: 45px;
+    padding-left: 5px;
+}
+.slidebar-top div p{
+    visibility: hidden;
+    padding-left: 20px;
+    margin: auto 0;
+}
+.slidebar-top div a:nth-child(2){
+    text-decoration: none;
+    padding-left: 15px;
+    margin: auto 0;
+    color: #BABABA;
 }
 
 
 
 /* ////////////////////////////////// */
 #main{
-    position: fixed;
+    position: absolute;
     top: 60px;
     left: var(--heightSlide);
     width: calc( 100vw - var(--heightSlide) ) ;
     height: calc( 100vh - 60px ) ;
-    background-color: rgb(21, 199, 15);
+    
     display: flex;
     flex-wrap: nowrap;
 	flex-direction: column;
     overflow: auto;
+    
+    transition: all 0.25s linear; 
+    
 }
+
 #main::-webkit-scrollbar {
     display: none;
 }
@@ -202,7 +257,7 @@ header{
     
 }
 .catégorie .cate{
-    
+    padding-left: 5px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start
@@ -219,25 +274,24 @@ header{
 }
 .catégorie .name-cate{
     
-    margin-right: 5px;
+    
     padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
 } 
 
 .jeux .catégorie{
-    
-    padding: 0 3px;
-    padding-top: 5px;
-    width: 100%;
-    min-height: 0px;
+    height: 0;
     width: 150px;
     visibility: hidden;
     background-color: rgba(3, 49, 70, 0.8);
-    transition: min-height 0.5s, border-radius 0.2s, visibility 0.2s ;
+    transition: height 0.5s,visibility 0.25s,border-radius 0.1s ;
+    /* transition: height 5s, border-radius 0.2s, visibility 0.2s,background-color 0.5s ; */
     
 }
 .jeux:hover .catégorie{
-    min-height: 180px;
-    visibility: visible;
+    height: 180px;
+    visibility: visible; 
     border-radius:  9px 9px 0 0;
     
 } 
