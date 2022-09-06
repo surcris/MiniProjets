@@ -1,6 +1,6 @@
 document.getElementById("btn-menu").onclick = function() {myFunction()};
 let etat = true;
-document.getElementById("btn-menu").on
+
 function myFunction() {
     if (etat) {
         document.querySelector(':root').style.setProperty('--heightSlide', '200px');
@@ -74,6 +74,54 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+document.getElementById("generator input[type=text]")
 
+function getInputValue() {
+    var e = document.querySelector("#generator input[type=number]").value;
+    var titre = document.querySelector("#generator input[type=text]").value;
+    console.log(e);
+    
+    if (parseInt(e) > 1) {
+        for (let index = 0; index < parseInt(e); index++) {
+            createJeux(titre);
+        }
+    } else {
+        createJeux(titre);
+    }
+    
+    
+}
 
+function createJeux(titre) {
+    var selectDiv = document.getElementById('choix-div');
+    var selectBk = document.getElementById('choix-bk');
+    var valueDiv = selectDiv.options[selectDiv.selectedIndex].value;
+    var valueBk = selectBk.options[selectBk.selectedIndex].value;
+    console.log(valueDiv);
 
+    var matches = document.querySelector("div[id="+valueDiv+"] .game");
+   // console.log(matches);
+    var divJeux = document.createElement('div');
+    divJeux.setAttribute('class','jeux');
+    matches.appendChild(divJeux);
+
+   
+    
+    //console.log(divJeux);
+    var divCatégorie = document.createElement('div');
+    divCatégorie.setAttribute('class','catégorie');
+    divJeux.appendChild(divCatégorie);
+    var divNj = document.createElement('div');
+    divNj.setAttribute('class','name-jeux');
+    divJeux.appendChild(divNj);
+
+    
+    //console.log(divNj);
+    var a = document.createElement('a');
+    a.setAttribute('href','Xbox GamePass/xbox.html');
+    a.innerHTML = titre;
+    divNj.appendChild(a);
+
+    
+     
+}
