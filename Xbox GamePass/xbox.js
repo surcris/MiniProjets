@@ -165,32 +165,24 @@ function detectJeux(div) {
 }
 
 function detectsJeux() {
-    console.log("////////////////////////");
-    var selectDivAJ = document.querySelectorAll('div[id^="ajout-container-"]');
-
     
+    var selectDivAJ = document.querySelectorAll('div[id^="ajout-container-"]');
 
     for (let index = 0; index < selectDivAJ.length; index++) {
         var selectDiv = document.querySelector('div[id^="ajout-container-'+(index+1)+'"] div[class^="jeux-"]');
-        console.log(selectDiv);
+        
         
         if (selectDiv) {
-            console.log("il ya des div Jeux");
             var selectButton = document.querySelectorAll('div[id^="ajout-container-'+(index+1)+'"] .pagination input');
 
             for (let index = 0; index < selectButton.length; index++) {
-                console.log("button : "+index+" visible");
+                
                 selectButton[index].style.visibility = 'visible'
                 
             }
         }
 
-        
-       
-        
     }
     
-    
-    console.log("////////////////////////");
 }
 detectsJeux();
