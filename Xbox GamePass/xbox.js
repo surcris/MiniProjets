@@ -75,15 +75,15 @@ let index;
 // });
 
 document.getElementById("generator input[type=text]")
-let compteurDivJeux = [];
+let compteurDivJeux = 0;
 function getInputValue() {
     var e = document.querySelector("#generator input[type=number]").value;
     var titre = document.querySelector("#generator input[type=text]").value;
     //console.log(e);
     
     if (parseInt(e) > 1) {
-        for (let index = 0; index < parseInt(e); index++) {
-            createJeux(titre);
+        for (let index = 0; index < parseInt(e); index++,compteurDivJeux++) {
+            createJeux(titre,compteurDivJeux);
         }
     } else {
         createJeux(titre);
@@ -126,9 +126,12 @@ function createJeux(titre) {
 }
 let initial = 0;
 function buttonNext(who) {
+    var d = document.getElementById("main");
+    //console.log(d.offsetWidth);
+
     var selectDiv = document.querySelectorAll('#'+who.parentNode.parentNode.id+' div[class^="jeux-"]');
     if (initial > -((selectDiv.length*180)-(selectDiv.length%7)*180)) {
-        initial -= 180 * 7;
+        initial -= 180 * Math.trunc(d.offsetWidth / 180);
         for (let index = 0; index < selectDiv.length; index++) {
             selectDiv[index].style.transform = "translateX(" + initial + "px)";
             
@@ -140,9 +143,12 @@ function buttonNext(who) {
 }
 
 function buttonPrec(who) {
+    var d = document.getElementById("main");
+    //console.log(d.offsetWidth);
+
     var selectDiv = document.querySelectorAll('#'+who.parentNode.parentNode.id+' div[class^="jeux-"]');
     if (initial < 0) {
-        initial += 180 * 7;
+        initial += 180 * Math.trunc(d.offsetWidth / 180);
         for (let index = 0; index < selectDiv.length; index++) {
             selectDiv[index].style.transform = "translateX(" + initial + "px)";
             
@@ -248,3 +254,5 @@ function medi(elem) {
 }
 medi(x);
 x.addListener(medi);
+var d = document.getElementById("main");
+    console.log(Math.trunc(d.offsetWidth / 180));

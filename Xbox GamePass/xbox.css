@@ -363,6 +363,15 @@ div[class^=jeux]:hover .cate div{
         display: grid;
         grid-template-columns: 70px calc(100% - 70px);
     }
+    #search-container input[type=text]{
+        border-right: none;
+        padding-left: 10px;
+        border-radius: 3px 0 0 3px ;
+        height: 40px;
+        width: 225px;
+        font-size: medium;
+        
+    }
 
     #slidebar-box{
     
@@ -386,7 +395,7 @@ div[class^=jeux]:hover .cate div{
         top: 120px;
         left: 0;
         width: 100vw ;
-        height: calc( 100vh - 60px ) ;
+        height: calc( 100vh - 120px ) ;
         
         display: flex;
         flex-wrap: nowrap;
