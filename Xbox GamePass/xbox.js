@@ -47,46 +47,46 @@ function mouseOut() {
 
 let l;
 let index;
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
+// var swiper = new Swiper(".mySwiper", {
+//     slidesPerView: 3,
+//     spaceBetween: 30,
+//     slidesPerGroup: 1,
+//     loop: true,
+//     loopFillGroupWithBlank: true,
     
-    pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    },
-    navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-    },
-    initialSlide: 0,
-    on: {
-        realIndexChange: function () {
-        index = swiper.realIndex + 1; /* slide 1 => slides[1] */
-        l = swiper.slides[index];
-        //l.style.color = "red";
+//     pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     },
+//     navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//     },
+//     initialSlide: 0,
+//     on: {
+//         realIndexChange: function () {
+//         index = swiper.realIndex + 1; /* slide 1 => slides[1] */
+//         l = swiper.slides[index];
+//         //l.style.color = "red";
         
         
-        },
-    },
-});
+//         },
+//     },
+// });
 
 document.getElementById("generator input[type=text]")
-let compteurDivJeux=0;
+let compteurDivJeux = [];
 function getInputValue() {
     var e = document.querySelector("#generator input[type=number]").value;
     var titre = document.querySelector("#generator input[type=text]").value;
     //console.log(e);
     
     if (parseInt(e) > 1) {
-        for (let index = 0; index < parseInt(e); index++,compteurDivJeux++) {
-            createJeux(titre,compteurDivJeux);
+        for (let index = 0; index < parseInt(e); index++) {
+            createJeux(titre);
         }
     } else {
-        createJeux(titre,compteurDivJeux);
+        createJeux(titre);
         compteurDivJeux++
     }
     
@@ -170,8 +170,7 @@ function detectsJeux() {
 
     for (let index = 0; index < selectDivAJ.length; index++) {
         var selectDiv = document.querySelector('div[id^="ajout-container-'+(index+1)+'"] div[class^="jeux-"]');
-        
-        
+
         if (selectDiv) {
             var selectButton = document.querySelectorAll('div[id^="ajout-container-'+(index+1)+'"] .pagination input');
 
@@ -186,3 +185,66 @@ function detectsJeux() {
     
 }
 detectsJeux();
+var x = window.matchMedia("(max-width: 600px)")
+function medi(elem) {
+    if (elem.matches) {
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            initialSlide: 0,
+            on: {
+                realIndexChange: function () {
+                index = swiper.realIndex + 1; /* slide 1 => slides[1] */
+                l = swiper.slides[index];
+                //l.style.color = "red";
+                
+                
+                },
+            },
+        });
+        console.log("if");
+    } else {
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            initialSlide: 0,
+            on: {
+                realIndexChange: function () {
+                index = swiper.realIndex + 1; /* slide 1 => slides[1] */
+                l = swiper.slides[index];
+                //l.style.color = "red";
+                
+                
+                },
+            },
+        });
+        console.log("else");
+    }
+}
+medi(x);
+x.addListener(medi);
