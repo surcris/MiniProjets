@@ -254,5 +254,18 @@ function medi(elem) {
 }
 medi(x);
 x.addListener(medi);
-var d = document.getElementById("main");
-    console.log(Math.trunc(d.offsetWidth / 180));
+
+
+document.querySelector(".slidebar-top div:last-child input").onclick = function() {myForm()};
+document.querySelector(".slidebar-top div:last-child p").onclick = function() {myForm()};
+
+function myForm() {
+    var form = document.querySelector("#formulaire");
+    if (form.style.visibility == "visible") {
+        form.style.visibility = "hidden"
+    }else{
+        form.style.visibility = "visible"
+    }
+    //console.log(form.currentStyle["opacity"] );
+    //form.style.visibility 
+}

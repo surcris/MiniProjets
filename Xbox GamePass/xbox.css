@@ -125,6 +125,12 @@ header{
     padding-top: 5px;
     padding-left: 10px;
 }
+.slidebar-top div input{
+    height: 35px;
+    width: 35px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
 .slidebar-top div p{
     visibility: hidden;
     padding-left: 20px;
@@ -405,4 +411,23 @@ div[class^=jeux]:hover .cate div{
         transition: all 0.25s linear; 
         background-color: #D8D8D8;
     }
+}
+
+#formulaire{
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    background-color: #2f3134;
+    position: absolute; 
+    top: 200px;
+    left: 60px; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    visibility: visible;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+
 }
