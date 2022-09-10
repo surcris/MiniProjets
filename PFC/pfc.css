@@ -11,6 +11,7 @@ body{
     left: 0;
     height: 100%;
     width: 100%;
+    
 }
 
 .header{
@@ -124,6 +125,12 @@ a {
     height: 40px;
     width: 100px;
     margin-bottom: 20px;
+    transition: all 0.5s;
+}
+.btn-menu input:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: aliceblue;
+    font-size: 15px;
 }
 #aff-game{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -156,6 +163,12 @@ div[class^="joueur"] img{
     background-color: #2AC73E;
     height: 40px;
     width: 100px;
+    transition: all 0.5s;
+}
+.btn-jouer input:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: aliceblue;
+    font-size: 15px;
 }
 #timer{
     margin-top: 10px;
@@ -200,6 +213,58 @@ div[class^="joueur"] img{
 #gohou input:active{
     color: aliceblue;
     background-color: rgb(226, 43, 43);
+}
+
+#historique{
+    transform: scale(0);
+    background-color: #DADDE2;
+    position: absolute;
+    position: absolute;
+    top: 150px;
+    left: 0; 
+    right: 0;
+    width: 300px;
+    height: auto;
+    max-height: 200px;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+#historique div:first-child{
+    display: flex;
+    justify-content: flex-end;
+}
+#historique div:first-child input{
+    width: 30px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+}
+#historique #aff-hist{
+    
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.btn-histo input{
+    border: none;
+    border-radius: 5px;
+    background-color: #2AC73E;
+    height: 30px;
+    width: 100px;
+    transition: all 0.5s;
+}
+.btn-histo input:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: aliceblue;
+    font-size: 15px;
+}
+#historique div table{
+    width: 100%;
 }
 @media only screen and (max-width: 600px) {
     .header{

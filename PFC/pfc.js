@@ -124,33 +124,46 @@ function gagnat() {
         gamerC++;
         getScore[1].innerHTML = gamerC;
         console.log(gamerC);
+        ajoutHist(0,1);
     }else if(choix==1 && choixC==3){
         gamerP++;
         getScore[0].innerHTML = gamerP;
         console.log(gamerP);
+        ajoutHist(1,0);
     }else if(choix==2 && choixC==1){
         gamerP++;
         getScore[0].innerHTML = gamerP;
         console.log(gamerP);
+        ajoutHist(1,0);
     }else if(choix==2 && choixC==2){
-
+        ajoutHist(0,0);
     }else if(choix==2 && choixC==3){
         gamerC++;
         getScore[1].innerHTML = gamerC;
         console.log(gamerC);
+        ajoutHist(0,1);
     }else if(choix==3 && choixC==1){
         gamerC++;
         getScore[1].innerHTML = gamerC;
         console.log(gamerC);
+        ajoutHist(0,1);
     }else if(choix==3 && choixC==2){
         gamerP++;
         getScore[0].innerHTML = gamerP;
         console.log(gamerP);
+        ajoutHist(1,0);
     }else if(choix==3 && choixC==3){
-
+        ajoutHist(0,0);
     }
     
    
+}
+
+function ajoutHist(v,p) {
+    var e = document.querySelector("#historique #aff-hist .hist-score ");
+    //console.log(e);
+    let table = "<tr><th>"+v+"</th><th>"+divmanch+"</th><th>"+p+"</th></tr>";
+    e.innerHTML += table;
 }
 
 document.querySelector("#solo input").onclick = function() {myFunction()};
@@ -181,5 +194,19 @@ document.querySelector("#gohou input").onclick = function() {p()};
 function p() {
     document.querySelector("#gohou").style.transform = "scale(0)";
     document.querySelector("#acceuil").style.transform = "scale(1)";
+    
+}
+
+document.querySelector("#historique .close input").onclick = function() {closeHist()};
+function closeHist() {
+    document.querySelector("#historique").style.transform = "scale(0)";
+    
+    
+}
+
+document.querySelector(".btn-histo input").onclick = function() {openHist()};
+function openHist() {
+    document.querySelector("#historique").style.transform = "scale(1)";
+    
     
 }
