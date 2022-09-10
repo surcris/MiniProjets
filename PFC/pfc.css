@@ -279,8 +279,13 @@ div[class^="joueur"] img{
         flex-direction: row;
         justify-content: space-between;
     }
+    
     .header h1{
-        padding-top: 0px;
+        text-align: center;
+        padding-top: auto;
+        padding-bottom: auto;
+        font-weight: bold;
+        font-size: 25px;
     }
 
     #container #acceuil{
