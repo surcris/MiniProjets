@@ -40,7 +40,7 @@ body{
     justify-content: center;
     grid-gap: 50px;
     
-    overflow: scroll;
+    overflow: auto;
 }
 
 .ajout{
