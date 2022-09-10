@@ -2,24 +2,50 @@ document.getElementById("btn-menu").onclick = function() {myFunction()};
 let etat = true;
 
 function myFunction() {
-    if (etat) {
-        document.querySelector(':root').style.setProperty('--heightSlide', '200px');
-        var e = document.querySelectorAll("div.slidebar-top p");
-        for (let index = 0; index < e.length; index++) {
-            e[index].style.visibility = "visible";
+    var d = document.querySelector("#slidebar-box");
+    var e = document.querySelectorAll("div.slidebar-top p");
+    if (x.matches) {
+        if (etat) {
+            document.querySelector(':root').style.setProperty('--heightSlide', '200px');
             
+            for (let index = 0; index < e.length; index++) {
+                e[index].style.visibility = "visible";
+                
+            }
+            d.style.visibility = "visible";
+            etat = false;
+        } else {
+            document.querySelector(':root').style.setProperty('--heightSlide', '70px');
+
+            for (let index = 0; index < e.length; index++) {
+                e[index].style.visibility = "hidden";
+                
+            }
+            d.style.visibility = "hidden";
+            etat = true;
         }
-        
-        etat = false;
     } else {
-        document.querySelector(':root').style.setProperty('--heightSlide', '70px');
-        var e = document.querySelectorAll("div.slidebar-top p");
-        for (let index = 0; index < e.length; index++) {
-            e[index].style.visibility = "hidden";
+       
+        if (etat) {
+            document.querySelector(':root').style.setProperty('--heightSlide', '200px');
+           
+            for (let index = 0; index < e.length; index++) {
+                e[index].style.visibility = "visible";
+                
+            }
             
+            etat = false;
+        } else {
+            document.querySelector(':root').style.setProperty('--heightSlide', '70px');
+            
+            for (let index = 0; index < e.length; index++) {
+                e[index].style.visibility = "hidden";
+                
+            }
+            etat = true;
         }
-        etat = true;
     }
+    
      
 }
 
@@ -193,8 +219,9 @@ function detectsJeux() {
 detectsJeux();
 var x = window.matchMedia("(max-width: 600px)")
 function medi(elem) {
+    var d = document.querySelector("#slidebar-box");
     if (elem.matches) {
-
+        d.style.visibility = "hidden";
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -221,8 +248,9 @@ function medi(elem) {
                 },
             },
         });
-        console.log("if");
+        
     } else {
+        d.style.visibility = "visible";
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
             spaceBetween: 30,
@@ -249,7 +277,7 @@ function medi(elem) {
                 },
             },
         });
-        console.log("else");
+        
     }
 }
 medi(x);

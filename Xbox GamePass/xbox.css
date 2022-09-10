@@ -381,10 +381,11 @@ div[class^=jeux]:hover .cate div{
 
     #slidebar-box{
     
-        position: fixed;
+        position: absolute;
+        z-index: 2;
         top: 60px;
-        width: 100vw;
-        height:60px  ;
+        width: 170px;
+        height:100vh  ;
         
         display: flex;
         flex-direction: column;
@@ -392,16 +393,16 @@ div[class^=jeux]:hover .cate div{
         
         background-color: #d50000;
         transition: all 0.25s linear; 
-        
+        visibility: hidden;
        
     }
 
     #main{
         position: absolute;
-        top: 120px;
+        top: 60px;
         left: 0;
         width: 100vw ;
-        height: calc( 100vh - 120px ) ;
+        height: calc( 100vh - 60px ) ;
         
         display: flex;
         flex-wrap: nowrap;

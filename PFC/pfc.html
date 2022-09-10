@@ -14,44 +14,53 @@
                 <img src="../images/home.png" alt="" width="50px">
             </div>
         </a>
-        <h1>PROJETS</h1>
+        <h1>Pierre, Feuille, Ciseaux</h1>
     </div>
     <div id="container">
-        <div id="window-gamer">
-            <div id="img-gamer">
-                <img class="img" src="images/choix.jpg" alt="" srcset="">
+        <div id="acceuil">
+            <div id="logo">
+                <img src="images/PP.jpg" alt="" >
             </div>
-            <div id="choix">
-                <button id="Pierre" onclick="pierre()">Pierre</button>
-                <button id="Feuille" onclick="feuille()">Feuille</button>
-                <button id="Ciseaux" onclick="ciseaux()">Ciseaux</button>
-            </div>
+            <div id="solo"><input type="button" value="Jouer Seul"></div>
+            <div id="multi"> <input type="button" value="Multijoueur"></div>
         </div>
-        <div id="menu">
-            <button id="start" onclick="etatGame()">START</button>
-            <div id="versus">
-                <p>GAMER</p>
-                <p>VS</p>
-                <p>COMPUTER</p>
+
+        <div id="jeux">
+            <div class="btn-menu">
+                <input type="button" value="Retour menu">
             </div>
-            
-            <div id="score">
-                <p class="score">0</p>
-                <p>:</p>
-                <p class="score">0</p>
+            <div id="aff-game">
+                <div class="joueur-0">
+                    <img src="images/time_clock.png" alt="">
+                    <p>Vous</p>
+                    <p class="score">0</p>
+                </div>
+                <div class="manche">
+                    <p>VS</p>
+                    <div>
+                        <p>Round</p>
+                        <div class="manche-score"></div>
+                    </div>
+                    
+                </div>
+                <div class="joueur-1">
+                    <img src="images/time_clock.png" alt="">
+                    <p>PC</p>
+                    <p class="score">0</p>
+                </div>
             </div>
-            <div id="timer">0
+            <div class="btn-jouer">
+                <input type="button" value="Jouer">
+            </div>
+            <div id="timer">Time : 0</div>
+            <div id="btn-choix">
+                <input id="Ciseaux" onclick="ciseaux()" type="image"  src="images/ciseaux.png" alt="">
+                <input id="Pierre" onclick="pierre()" type="image" src="images/fisted-hand.png" alt="">
+                <input id="Feuille" onclick="feuille()" type="image" src="images/hand.png" alt="">
                 
             </div>
-        </div>
-        <div id="window-computer">
-            <div id="img-computer">
-                <img class="img" src="images/choix.jpg" alt="" srcset="">
-            </div>
-            <div id="choix-computer"></div>
-        </div>
-    </div>
 
+        </div>
     <script src="pfc.js"></script>
 </body>
 </html>

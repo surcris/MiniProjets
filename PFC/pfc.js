@@ -1,20 +1,11 @@
-let getImg = document.getElementsByClassName("img");
-let getDiv = document.getElementById("img-gamer");
+let getImg = document.querySelectorAll("#aff-game div[class^='joueur'] img");
+
 let getScore = document.getElementsByClassName("score");
+let getManch = document.getElementsByClassName("manche-score");
+let divmanch = 0;
 
-function btnImage() {
-    
-}
 
-function pierre() {
-    let getBtn = document.getElementById("pierre");
-    //if(getBtn.clicked){
-        getImg[0].src = "images/pierre.jpg"
-        // ("scr","images/pierre.jpg");
-        //getDiv.appendChild(getImg[0])
-        console.log(getImg[0])
-    //}
-}
+
 let choix = 0;
 function feuille() {
     choix = 1;
@@ -29,8 +20,8 @@ function pierre() {
 function btnStart() {
     
     if (depart) {
-        getImg[0].src = "images/choix.jpg";
-        getImg[1].src = "images/choix.jpg";
+        getImg[0].src = "images/time_clock.png";
+        getImg[1].src = "images/time_clock.png";
         affTimer();
     }
 }
@@ -42,7 +33,7 @@ let getBtn;
 let numR = 0;
 function affTimer() {
     secondes = secondes < 10 ? secondes : secondes;
-    getTimer.innerHTML = `${secondes}`;
+    getTimer.innerHTML ="time : "+`${secondes}`;
     secondes = secondes < 0 ? 0 : secondes - 1;
     
     if(secondes < 0){
@@ -55,10 +46,13 @@ function affTimer() {
         numR = 0;
         choix = 0;
         choixC = 0;
+        
     }
 }
 
 function etatGame() {
+    divmanch++;
+    getManch[0].innerHTML = divmanch;
     depart = true;
 }
 
@@ -73,7 +67,7 @@ function computer(numR) {
     switch (numR) {
         case 1:
             console.log("feuille")
-            getImg[1].src = "images/feuille.jpg";
+            getImg[1].src = "images/hand.png";
             choixC = 1;
             //getBtn = null;
             break;
@@ -85,7 +79,7 @@ function computer(numR) {
             break;
         case 3:
             console.log("pierre")
-            getImg[1].src = "images/pierre.jpg";
+            getImg[1].src = "images/fisted-hand.png";
             choixC = 3;
             //getBtn = null;
         break;
@@ -94,28 +88,25 @@ function computer(numR) {
 }
 
 function gamer() {
-
+    console.log("choisi:");
     switch (choix) {
         case 1:
             
-            getBtn = document.getElementById("feuille");
-            getImg[0].src = "images/feuille.jpg";
+            getBtn = document.querySelector("#btn-choix input#Feuille");
+            getImg[0].src = "images/hand.png";
             
-            //getBtn = null;
             break;
         case 2:
             
-            getBtn = document.getElementById("ciseaux");
+            getBtn = document.getElementById("#btn-choix input#Ciseaux");
             getImg[0].src = "images/ciseaux.png";
             
-            //getBtn = null;
             break;
         case 3:
             
-            getBtn = document.getElementById("pierre");
-            getImg[0].src = "images/pierre.jpg";
+            getBtn = document.getElementById("#btn-choix input#Pierre");
+            getImg[0].src = "images/fisted-hand.png";
             
-            //getBtn = null;
         break;
         
     }
@@ -159,47 +150,29 @@ function gagnat() {
 
     }
     
-    // switch (choix && choixC) {
-    //     case 1 && 1:
-            
-    //         break;
-    //     case 1 && 2:
-    //         gamerC++;
-    //         getScore[1].innerHTML = gamerC;
-    //         console.log(gamerC);
-    //         break;
-    //     case 1 && 3:
-    //         gamerP++;
-    //         getScore[0].innerHTML = gamerP;
-    //         console.log(gamerP);
-    //         break;  
-    //     case 2 && 1:
-    //         gamerP++;
-    //         getScore[0].innerHTML = gamerP;
-    //         console.log(gamerP);
-    //     break;
-    //     case 2 && 2:
-        
-    //         break;
-    //     case 2 && 3:
-    //         gamerC++;
-    //         getScore[1].innerHTML = gamerC;
-    //         console.log(gamerC);
-    //         break;  
-    //     case 3 && 1:
-    //         gamerC++;
-    //         getScore[1].innerHTML = gamerC;
-    //         console.log(gamerC);
-    //     break;
-    //     case 3 && 2:
-    //         gamerP++;
-    //         getScore[0].innerHTML = gamerP;
-    //         console.log(gamerP);
-    //         break;
-    //     case 3 && 3:
+   
+}
+
+document.querySelector("#solo input").onclick = function() {myFunction()};
+
+function myFunction() {
+    document.querySelector("#acceuil").style.transform = "scale(0)";
+    document.querySelector("#jeux").style.transform = "scale(1)";
+}
+
+
+document.querySelector("#jeux .btn-menu input").onclick = function() {retour()};
+
+function retour() {
+    document.querySelector("#jeux").style.transform = "scale(0)";
+    document.querySelector("#acceuil").style.transform = "scale(1)";
+}
+
+document.querySelector(".btn-jouer input").onclick = function() {etatGame()};
+
+
+document.querySelector("#multi input").onclick = function() {test()};
+function test() {
+    console.log(getManch)
     
-    //         break;        
-    //     default:
-    //         break;
-    // }
 }
