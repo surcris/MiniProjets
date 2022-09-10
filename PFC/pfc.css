@@ -6,7 +6,6 @@
 
 body{
    
-    
     position: relative;
     top: 0;
     left: 0;
@@ -175,8 +174,17 @@ div[class^="joueur"] img{
     #container #acceuil{
     
         width: 100%;
+
+    }
+
+    div[class^="joueur"] img{
+        width: 100px;
+        height: 100px;
+    }
+
+    #jeux{
         
+        width: auto;
         
-       
     }
 }
