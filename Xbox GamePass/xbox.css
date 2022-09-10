@@ -384,7 +384,7 @@ div[class^=jeux]:hover .cate div{
         position: absolute;
         z-index: 2;
         top: 60px;
-        width: 170px;
+        width: 180px;
         height:100vh  ;
         
         display: flex;
