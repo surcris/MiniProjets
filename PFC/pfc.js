@@ -173,6 +173,13 @@ document.querySelector(".btn-jouer input").onclick = function() {etatGame()};
 
 document.querySelector("#multi input").onclick = function() {test()};
 function test() {
-    console.log(getManch)
+    document.querySelector("#gohou").style.transform = "scale(1)";
+    document.querySelector("#acceuil").style.transform = "scale(0)";
+    
+}
+document.querySelector("#gohou input").onclick = function() {p()};
+function p() {
+    document.querySelector("#gohou").style.transform = "scale(0)";
+    document.querySelector("#acceuil").style.transform = "scale(1)";
     
 }
