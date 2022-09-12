@@ -1,78 +1,72 @@
 body{
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-rows: auto 1fr; 
+    width: 100vw;
+    height: 100vh;
 }
 
 .header{
+    width: 100vw;
+    height: 60px;
     background-color: blueviolet;
-    width: auto;
-    height: auto;
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.header > h1{
-    font-family: 'Varela Round', sans-serif;
-    
-    padding-top: 10px;
+.header .PP img{
+    width: 50px;
     height: 50px;
-    margin: auto;
 }
-a {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
+.header div{
+    margin: auto 20px auto 10px  ;
+   
+}
+.header a{
+    margin: auto 10px auto 10px  ;
+   
+}
+.header h1{
+    margin: auto 0 auto 0  ;
+   
 }
 
 .formulaire{
-    max-width: 350px;
-    margin: auto;
-    margin-top: 200px;
-    
-    border-radius: 10px;
-    
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 500px;
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    justify-items: flex-start;
-    
-}
-
-.text-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.text-form > input{
-    margin: 10px 10px;
     width: 300px;
-    border: none;
-    border-bottom: 1px solid gray;
+    margin: 100px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.formulaire div:last-child{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center
+}
+
+.formulaire .form{
+    display: flex;
+    flex-direction: column;
+}
+.formulaire .form input{
+    height: 35px;
+    border:none;
+    border-bottom: 1px solid rgb(133, 132, 132);
     
+    margin-bottom: 2px;
 }
 
-.btn-form, button{
-    margin: 10px 10px;
+.formulaire .form input:focus , textarea:focus{
+    outline: none;
+}
+.formulaire h2{
+    text-align: center;
 }
 
-.cartes{
-    width: 800px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
-    justify-content: center;
-    grid-gap: 50px;
+
+
+@media only screen and (max-width: 600px) {
+    .formulaire{
+       
+    }
 }
