@@ -3,6 +3,7 @@ body{
     margin: 0;
     width: 100vw;
     height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header{
@@ -36,12 +37,25 @@ body{
     display: flex;
     flex-direction: column;
 }
-.formulaire div:last-child{
+.formulaire .btn-form{
     margin-top: 20px;
     display: flex;
     justify-content: center
 }
-
+.formulaire .form-co-ins{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+.formulaire .form-co-ins a{
+    
+    font-weight: bold;
+    color: rgb(71, 71, 71);
+    text-decoration: none;
+}
 .formulaire .form{
     display: flex;
     flex-direction: column;
@@ -50,7 +64,8 @@ body{
     height: 35px;
     border:none;
     border-bottom: 1px solid rgb(133, 132, 132);
-    font-size: medium;
+    font-size: 15px;
+    
     font-weight:500;
     margin-bottom: 2px;
 }
