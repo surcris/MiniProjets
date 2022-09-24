@@ -1,4 +1,4 @@
-import "./start/addRequire.js";
+import "./addRequire.js";
 
 require('dotenv').config();
 
