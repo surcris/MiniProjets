@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="header">
+        <a href="../index.html">
+            <div class="header-home">
+                <img src="../images/home.png" alt="" width="50px">
+            </div>
+        </a>
+        <h1>PROJETS</h1>
+    </div>
+    <div class="todo-container">
+        <div class="todo-input">
+            <img src="edit_note.png" alt="" style="opacity: 0.4;">
+            <input id="inputText" type="text" name="Task" placeholder="Tâche.." >
+        </div>
+        <div class="todo-categorie">
+            <div>
+                <button onclick="toutBtn()">Tout</button>
+                <button onclick="enCourBtn()" >En cour</button>
+                <button onclick="completBtn()">Complet</button>
+                <button onclick="affTab()">Tableau</button>
+            </div>
+            <div>
+                <button class="delete" onclick="removeAllTache()">Effacer tout</button>
+            </div>
+            
+        </div>
+        <div id="todo-aff">
+            <!-- <div class="div-container">
+                <div class="div-left">
+                    <input type="checkbox" name="" id="">
+                    <p>Vous n'avez pas de taches</p>
+                </div>
+                <div class="menu">
+                    <input type="image" src="dot.png" alt="" width="25px" height="25px" onclick="creationTache()">  
+                    <div class="div-task-menu">
+                        <ul class="task-menu">
+                            <li><i class="uil uil-pen"></i>Edit</li>
+                            <li><i class="uil uil-trash"></i>Remove</li>
+                        </ul>
+                    </div>
+                    
+                </div> 
+                
+            </div> -->
+            
+            
+            
+            
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>

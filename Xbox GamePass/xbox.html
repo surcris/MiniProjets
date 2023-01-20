@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="xbox.css">
+    <title>Xbox GamePass</title>
+</head>
+<body>
+    <header>
+        <div id="btn-menu">
+            <input id="menu-button" type="image" src="images/hamburger-menu.svg" onclick="">
+        </div>
+        <div id="search-container">
+            <input type="text" name="" id="" placeholder="Search..." >
+            <input type="image" src="images/search.svg">
+        </div>
+    </header>
+    <div id="slidebar-box" onmouseover="mouseOver()" onmouseout="mouseOut()">
+        <div class="slidebar-top" >
+            <div>
+                <a href="/index.html"><img src="./images/home_icon.png" alt=""></a>
+                <a href="/index.html"><p>Acceuil</p></a>
+            </div>
+            <div>
+                <input type="image" src="images/form_d.png">
+                <p>Formulaire</p>
+            </div>
+            
+        </div>
+        <div class="slidebar-bottom">Bottom</div>
+    </div> 
+    <div id="main">
+        <div id="presentaion">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        
+        <div id="ajout-container-1">
+            <div class="pagination">
+                <input type="button" value="prec" onclick="buttonPrec(this)">
+                <input type="button" value="next" onclick="buttonNext(this)">
+                
+            </div>
+            <div class="game">
+                
+                
+            </div>
+        </div>
+        <div id="ajout-container-2">
+            <div class="pagination">
+                <input type="button" value="prec" onclick="buttonPrec(this)">
+                <input type="button" value="next" onclick="buttonNext(this)">
+                
+            </div>
+            <div class="game">
+                
+            
+            </div>
+        </div>
+
+        <div id="ajout-container-3">
+            <div class="pagination">
+                <input type="button" value="prec" onclick="buttonPrec(this)">
+                <input type="button" value="next" onclick="buttonNext(this)">
+                
+            </div>
+            <div class="game">
+
+            </div>
+        </div>
+    </div> 
+
+    <div id="formulaire">
+        <input type="text" name="" id="" placeholder="Name...">
+            <input type="number" name="" id="" value="1" >
+            <select name="choix-div" id="choix-div">
+                <option value="" selected>Choisir votre div</option>
+                <option value="ajout-container-1">ajout-container-1</option>
+                <option value="ajout-container-2">ajout-container-2</option>
+                <option value="ajout-container-3">ajout-container-3</option>
+            </select>
+            <select name="choix-bk" id="choix-bk">
+                <option value="" selected>Choisir votre du back</option>
+                <option value="ac-ody.jpg">ac-ody</option>
+                <option value="assassin.jpg">assassin</option>
+                
+            </select>
+            <input type="submit" name="" id="" onclick="getInputValue()">
+            <input type="button" value="detect" name="" id="" onclick="detectsJeux()">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="xbox.js"></script>
+</body>
+</html>

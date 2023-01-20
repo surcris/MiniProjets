@@ -1,0 +1,104 @@
+<div id="window-gamer">
+            <div id="img-gamer">
+                <img class="img" src="images/choix.jpg" alt="" srcset="">
+            </div>
+            <div id="choix">
+                <button id="Pierre" onclick="pierre()">Pierre</button>
+                <button id="Feuille" onclick="feuille()">Feuille</button>
+                <button id="Ciseaux" onclick="ciseaux()">Ciseaux</button>
+            </div>
+        </div>
+        <div id="menu">
+            <button id="start" onclick="etatGame()">START</button>
+            <div id="versus">
+                <p>GAMER</p>
+                <p>VS</p>
+                <p>COMPUTER</p>
+            </div>
+            
+            <div id="score">
+                <p class="score">0</p>
+                <p>:</p>
+                <p class="score">0</p>
+            </div>
+            <div id="timer">0
+                
+            </div>
+        </div>
+        <div id="window-computer">
+            <div id="img-computer">
+                <img class="img" src="images/choix.jpg" alt="" srcset="">
+            </div>
+            <div id="choix-computer"></div>
+        </div>
+    </div>
+
+
+
+    #container div[id^="window"]{
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: 350px 150px;
+}
+div[id^="window"] div[id^="img"]{
+    margin: auto;
+    
+}
+#choix{
+    margin: auto;
+    margin-top: 30px;
+    
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    font-size: 70px;
+}
+
+#choix button{
+   
+    font-size: 20px;
+}
+
+#container img{
+    
+    height: 340px;
+    object-fit: cover;
+}
+
+#menu{
+    border: 1px solid rgb(219, 6, 6);
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+#menu #start{
+    font-size: 30px;
+}
+
+#menu #versus{
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#menu #score{
+    font-size: 70px;
+    text-align: center;
+    margin: auto;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#menu #timer{
+    border: 1px solid rgb(219, 6, 6);
+    font-size: 70px;
+    margin-top: -70px;
+    
+    
+    
+}

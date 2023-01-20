@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr; 
+}
+
+.header{
+    background-color: blueviolet;
+    width: auto;
+    height: auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header > h1{
+    font-family: 'Varela Round', sans-serif;
+    
+    padding-top: 10px;
+    height: 50px;
+    margin: auto;
+}
+a {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#chrono{
+    border: 1px solid black;
+    width: 500px;
+    margin: auto;
+    margin-top: 300px;
+    text-align: center;
+}

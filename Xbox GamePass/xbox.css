@@ -1,0 +1,434 @@
+:root {
+    --heightSlide: 70px;
+    --white: #ffffff; 
+    --elementAJ1:5;
+  }
+
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+body{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+   
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: #9b0000   ;
+    display: grid;
+    grid-template-columns: 70px calc(100% - 70px);
+}
+#btn-menu {
+    height: 60px;
+    width: 70px;
+    background-color: #2f3134;
+}
+#btn-menu:active #slidebar-container{
+    background-color: #0259db;
+}
+#btn-menu input{
+    padding-top: 5px;
+    height: 55px;
+    width: 70px;
+    margin: auto;
+    background-color: #9b0000   ;
+}
+#btn-menu input:active {
+    
+    --heightSlide:200px;
+}
+#btn-menu input:hover {
+    background-color: white;
+    
+}
+#search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#search-container input{
+    background-color: #D8D8D8;
+    border: none;
+    
+    height: 25px;
+}
+#search-container input[type=text]{
+    border-right: none;
+    padding-left: 10px;
+    border-radius: 3px 0 0 3px ;
+    height: 40px;
+    width: 400px;
+    font-size: medium;
+    
+}
+#search-container input[type=image]{
+    border-left: none;
+    border-radius:0 3px 3px 0;
+    color: #D8D8D8;
+    height: 40px;
+}
+/* ////////////////////////////////// */
+
+#slidebar-box{
+    
+    position: fixed;
+    top: 60px;
+    width: var(--heightSlide);
+    height: calc( 100vh - 60px ) ;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    background-color: #d50000;
+    transition: all 0.25s linear; 
+    
+   
+}
+
+#slidebar-box:hover #main{
+    --heightSlide:200px;
+    
+}
+
+.slidebar-top div {
+    margin: 3px;
+    padding:5px 5px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.slidebar-top div:hover {
+   background-color: white;
+   border-radius: 5px;
+   margin: 3px;
+}
+.slidebar-top div:hover p{
+    color: black; 
+    
+ }
+
+.slidebar-top div img{
+    height: 35px;
+    width: 35px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.slidebar-top div input{
+    height: 35px;
+    width: 35px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.slidebar-top div p{
+    visibility: hidden;
+    padding-left: 20px;
+    margin: auto 0;
+}
+.slidebar-top div a:nth-child(2){
+    text-decoration: none;
+    padding-left: 15px;
+    margin: auto 0;
+    color: black;
+}
+
+
+
+/* ////////////////////////////////// */
+#main{
+    position: absolute;
+    top: 60px;
+    left: var(--heightSlide);
+    width: calc( 100vw - var(--heightSlide) ) ;
+    height: calc( 100vh - 60px ) ;
+    
+    display: flex;
+    flex-wrap: nowrap;
+	flex-direction: column;
+    overflow: auto;
+    
+    transition: all 0.25s linear; 
+    background-color: #D8D8D8;
+}
+
+#main::-webkit-scrollbar {
+    display: none;
+}
+#presentaion{
+    position: relative;
+    width: 95%;
+    margin:0 auto;
+    margin-top: 30px;
+}
+
+#generator{
+    background-color: #2f3134;
+    margin:0 auto;
+    margin-top: 30px;
+    width: 95%;
+    height: 350px;
+    border: 1px solid black;
+}
+
+#slidebar-container{
+    background-color: #2f3134;
+    
+    width: var(--heightSlide);
+    height: 100%;
+
+}
+
+.swiper {
+    width: 100%;
+    height: 350px;
+    
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 5px;
+    width: 300px;
+    
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div[id^=ajout-container]{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+div[id^=ajout-container] .pagination{
+    display: flex;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 35px;
+    
+}
+div[id^=ajout-container] .pagination input{
+   visibility: hidden;
+}
+
+
+div[id^=ajout-container] .game{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+    padding-top: 5px;
+    margin: 0 35px;
+    width: auto;
+    overflow-x: auto;
+    
+}
+.game::-webkit-scrollbar {
+    display: none;
+}
+div[id^=ajout-container]::-webkit-scrollbar {
+    display: none;
+}
+
+
+div[class^=jeux]{
+    
+    background-color: aliceblue;
+    height: 200px;
+    width: 150px;
+    margin-right: 30px;
+    border-radius: 10px;
+    
+    background-size: 150px 200px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /* animation: mymove 10s linear infinite; */
+    transition:transform 1s ;
+}
+.game:hover div[class^=jeux] {
+    animation-play-state: paused;
+}
+div[class^=jeux] {
+    
+}
+@keyframes mymove {
+    from {transform: translateX(0px);}
+    to {transform: translateX(calc(-150px * 10));}
+  }
+div[class^=jeux] a {
+    
+    text-decoration: none;
+    color: rgba(214, 214, 214, 1);
+}
+
+div[class^=jeux] .name-jeux{
+    text-align: center;
+    height: 20px;
+    width: 100%;
+    background-color: rgba(3, 49, 70, 0.8);
+    border-radius: 0px 0 9px 9px;
+    
+}
+.catégorie .cate{
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start
+}
+.catégorie .cate div{
+    transform: scale(0);
+    margin-right: 5px;
+    padding: 2px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+   
+}
+.catégorie .name-cate{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+} 
+
+div[class^=jeux] .catégorie{
+    height: 0;
+    width: 150px;
+    visibility: hidden;
+    background-color: rgba(3, 49, 70, 0.8);
+    transition: height 0.5s,visibility 0.1s,border-radius 0.1s ;
+    
+}
+div[class^=jeux] .cate div{
+    transition: transform 0.9s; 
+}
+div[class^=jeux]:hover .catégorie{
+    height: 180px;
+    visibility: visible; 
+    border-radius:  9px 9px 0 0;
+    
+} 
+div[class^=jeux]:hover .cate div{
+    transform: scale(1);
+
+} 
+
+@keyframes scroll {
+    0%{
+        transition: translateX(0);
+    }
+    100%{
+        transition: translateX(-250px * 9);
+    }
+}
+
+#generator{
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    header{
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        background-color: #9b0000   ;
+        display: grid;
+        grid-template-columns: 70px calc(100% - 70px);
+    }
+    #search-container input[type=text]{
+        border-right: none;
+        padding-left: 10px;
+        border-radius: 3px 0 0 3px ;
+        height: 40px;
+        width: 225px;
+        font-size: medium;
+        
+    }
+
+    #slidebar-box{
+    
+        position: absolute;
+        z-index: 2;
+        top: 60px;
+        width: 180px;
+        height:100vh  ;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        background-color: #d50000;
+        transition: all 0.25s linear; 
+        visibility: hidden;
+       
+    }
+
+    #main{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw ;
+        height: calc( 100vh - 60px ) ;
+        
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        overflow: auto;
+        
+        transition: all 0.25s linear; 
+        background-color: #D8D8D8;
+    }
+}
+
+#formulaire{
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    background-color: #2f3134;
+    position: absolute; 
+    top: 200px;
+    left: 60px; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    visibility: visible;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+
+}

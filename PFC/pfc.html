@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pfc.css">
+    <title>PFC</title>
+</head>
+<body>
+    <div class="header">
+        <a href="../index.html">
+            <div class="header-home">
+                <img src="../images/home.png" alt="" width="50px">
+            </div>
+        </a>
+        <div><h1>Pierre, Feuille, Ciseaux</h1></div>
+        
+    </div>
+    <div id="gohou">
+        <img src="images/GOHOU.jpg" alt="">
+        <input type="button" value="Clic ici pour de faire GILFER">
+    </div>
+    <div id="container">
+        <div id="acceuil">
+            <div id="logo">
+                <img src="images/PP.jpg" alt="" >
+            </div>
+            <div id="solo"><input type="button" value="Jouer Seul"></div>
+            <div id="multi"> <input type="button" value="Multijoueur"></div>
+        </div>
+
+        <div id="jeux">
+            <div class="btn-menu">
+                <input type="button" value="Retour menu">
+            </div>
+            <div id="aff-game">
+                <div class="joueur-0">
+                    <img src="images/time_clock.png" alt="">
+                    <p>Vous</p>
+                    <p class="score">0</p>
+                </div>
+                <div class="manche">
+                    <p>VS</p>
+                    <div>
+                        <p>Round</p>
+                        <div class="manche-score"></div>
+                    </div>
+                    
+                </div>
+                <div class="joueur-1">
+                    <img src="images/time_clock.png" alt="">
+                    <p>PC</p>
+                    <p class="score">0</p>
+                </div>
+            </div>
+            <div class="btn-jouer">
+                <input type="button" value="Jouer">
+            </div>
+            <div id="timer">Time : 0</div>
+            <div id="btn-choix">
+                <input id="Ciseaux" onclick="ciseaux()" type="image"  src="images/ciseaux.png" alt="">
+                <input id="Pierre" onclick="pierre()" type="image" src="images/fisted-hand.png" alt="">
+                <input id="Feuille" onclick="feuille()" type="image" src="images/hand.png" alt="">
+                
+            </div>
+            <div class="btn-histo">
+                <input type="button" value="Hystorique">
+            </div>
+
+        </div>
+        <div id="historique">
+            <div class="close">
+                <input type="button" value="X">
+            </div>
+            <table>
+                <tr>
+                    <th>Vous</th>
+                    <th>Round</th>
+                    <th>PC</th>
+                </tr>
+            </table>
+            <div id="aff-hist">
+                <table class="hist-score">
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    <script src="pfc.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+:root {
+    --success: #00b894;
+    --progress: #e17055;
+  }
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main{
+
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70px;
+    
+}
+.btn-menu {
+    height: 70px;
+    width: 70px;
+    background-color: #2f3134;
+}
+.stats{
+    
+    border: 1px red solid;
+    height: fit-content;
+    width: 350px;
+}
+.stats div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+.stats div input{
+    margin-right: 10px;
+    width: 35px;
+    height: fit-content;
+}
+.stats div button{
+    margin-right: 10px;
+    width: 35px;
+    height: fit-content;
+}
+.stats p{
+    text-align: center;
+}
+
+.aff{
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: fit-content;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}   
+.charg{
+    width: 80%;
+    
+}
+
+.progressbar{
+    height: 5px;
+    background-color: var(--success);
+}
+
+
+
+.mp3 {
+    /* animation: anim 10s infinite; */
+}
+
+/* @keyframes anim {
+    from {
+        width: 0%;
+        
+    }
+
+    to {
+        width: 100%;
+    }
+} */
